@@ -192,9 +192,6 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Widget _buildLoginButton(LoginState state, BuildContext context) {
-    //     if (state is LoginLoading) {
-    //     return
-    //     }
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: Theme.of(context).colorScheme.primary,

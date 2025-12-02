@@ -25,10 +25,6 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
         event.email,
         event.password,
       );
-      // await _supabaseService.insertUserData(
-      //   userId: response.user!.id,
-      //   email: event.email,
-      // );
       emit(SignUpSuccess(user: response.user));
     } on AuthException catch (e) {
       emit(SignUpFailure(message: e.message));

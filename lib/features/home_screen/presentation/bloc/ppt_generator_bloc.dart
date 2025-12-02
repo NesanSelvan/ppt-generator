@@ -41,7 +41,6 @@ class PptGeneratorBloc extends Bloc<PptGeneratorEvent, PptGeneratorState> {
 
       final response = await _pptService.generatePpt(requestBody);
 
-      // Insert into DB
       try {
         final user = _supabaseService.currentUser;
         int? userInfoId;
@@ -70,7 +69,6 @@ class PptGeneratorBloc extends Bloc<PptGeneratorEvent, PptGeneratorState> {
           'user_id': user?.id,
         });
       } catch (e) {
-        // Don't fail the UI if DB insert fails
         print('DB Insert Error: $e');
       }
 

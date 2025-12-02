@@ -18,7 +18,6 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> _checkLoginStatus() async {
-    //     SupabaseService().signOut();
     await Future.delayed(const Duration(seconds: 2));
     if (!mounted) return;
 
@@ -33,7 +32,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: AppColors.purpleColor,
       body: Container(
         alignment: Alignment.center,
         child: Image.asset(AppImages.appIcon, scale: 10),

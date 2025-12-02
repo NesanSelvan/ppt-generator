@@ -43,7 +43,6 @@ class _PptViewerScreenState extends State<PptViewerScreen> {
             'https://docs.google.com/gview?embedded=true&url=${widget.pptUrl}',
           ),
         );
-      // Also download for the download button
       _downloadToTemp();
     } else {
       _loadPdf();
@@ -64,7 +63,6 @@ class _PptViewerScreenState extends State<PptViewerScreen> {
         });
       }
     } catch (e) {
-      // Ignore download errors for viewing if it's PPT, just log or show snackbar if needed
       debugPrint('Error downloading PPT for local path: $e');
     }
   }
