@@ -8,7 +8,7 @@ import 'package:ppt_generator/features/home_screen/data/models/ppt_response_mode
 class PptService {
   Future<PptResponseModel> generatePpt(PptRequestModel requestBody) async {
     final response = await http.post(
-      Uri.parse('http://192.168.1.103:8000/generate-ppt'),
+      Uri.parse('https://api.magicslides.app/public/api/ppt_from_topic'),
       headers: {'Content-Type': 'application/json'},
       body: json.encode(requestBody.toJson()),
     );
