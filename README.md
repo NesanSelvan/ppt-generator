@@ -2,6 +2,13 @@
 
 A Flutter application that generates PowerPoint presentations using AI.
 
+## Download APK
+
+- Repo asset: [app-arm64-v8a-release.apk](assets/apk/app-arm64-v8a-release.apk)
+- Direct URL (raw): https://raw.githubusercontent.com/NesanSelvan/ppt-generator/main/assets/apk/app-arm64-v8a-release.apk
+
+Note: The APK is stored under `assets/apk/` in this repository so it can be downloaded directly from GitHub.
+
 ## Screenshots
 
 | Login | Sign Up | Home Page |
@@ -40,4 +47,3 @@ The application follows **Clean Architecture** principles with **BLoC (Business 
 - **Presentation Layer**: Widgets and BLoCs (e.g., `HomeBloc`, `AuthBloc`).
 - **Domain/Data Layer**: Models (e.g., `PptRequestModel`) and Services (e.g., `SupabaseService`, `PptService`).
 - **Core**: Constants, Themes, and Configs.
-
