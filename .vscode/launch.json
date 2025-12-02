@@ -22,7 +22,10 @@
             "name": "ppt_generator (release mode)",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "release"
+            "flutterMode": "release",
+            "toolArgs": [
+                "--dart-define=APP_CONFIG_FILE=config/secrets.json"
+            ]
         }
     ]
 }

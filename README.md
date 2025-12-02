@@ -1,16 +1,43 @@
-# ppt_generator
+# PPT Generator
 
-A new Flutter project.
+A Flutter application that generates PowerPoint presentations using AI.
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+| Login | Sign Up | Home Page |
+|:---:|:---:|:---:|
+| ![Login](assets/screenshots/login.png) | ![Sign Up](assets/screenshots/sign_up.png) | ![Home Page](assets/screenshots/home_page.png) |
 
-A few resources to get you started if this is your first Flutter project:
+| Drawer | History |
+|:---:|:---:|
+| ![Drawer](assets/screenshots/drawer.png) | ![History](assets/screenshots/history.png) |
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## How to Run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Prerequisites
+- Flutter SDK installed
+- Supabase account and project setup
+
+### App Setup
+1. Ensure you have the `config/secrets.json` file with your Supabase credentials.
+2. Run the Flutter app:
+   ```bash
+   flutter run
+   ```
+
+## Database Used
+
+This project uses **Supabase** (PostgreSQL) for:
+- **Authentication**: User sign-up and login.
+- **Data Storage**:
+  - `user_data`: Stores user profile information.
+  - `ppt_generation_info`: Logs details of generated presentations.
+
+## Architecture
+
+The application follows **Clean Architecture** principles with **BLoC (Business Logic Component)** for state management.
+
+- **Presentation Layer**: Widgets and BLoCs (e.g., `HomeBloc`, `AuthBloc`).
+- **Domain/Data Layer**: Models (e.g., `PptRequestModel`) and Services (e.g., `SupabaseService`, `PptService`).
+- **Core**: Constants, Themes, and Configs.
+
